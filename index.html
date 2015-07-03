@@ -5,16 +5,15 @@
   
   <title>m2shad0w</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="layout: defaultNot found :(    Sorry, but the page you were trying to view does not exist.">
+  <meta name="description" content="make life">
 <meta property="og:type" content="website">
 <meta property="og:title" content="m2shad0w">
-<meta property="og:url" content="http://m2shad0w.com/404.html">
+<meta property="og:url" content="http://m2shad0w.com/index.html">
 <meta property="og:site_name" content="m2shad0w">
-<meta property="og:description" content="layout: defaultNot found :(    Sorry, but the page you were trying to view does not exist.">
-<meta property="og:updated_time" content="2015-07-03T05:48:30.000Z">
+<meta property="og:description" content="make life">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="m2shad0w">
-<meta name="twitter:description" content="layout: defaultNot found :(    Sorry, but the page you were trying to view does not exist.">
+<meta name="twitter:description" content="make life">
   
     <link rel="alternative" href="/atom.xml" title="m2shad0w" type="application/atom+xml">
   
@@ -182,11 +181,13 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="page-undefined" class="article article-type-page" itemscope itemprop="blogPost">
+      <div class="body-wrap">
+  
+    <article id="post-battery-discharge" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/404.html" class="article-date">
-  	<time datetime="2015-07-03T05:48:30.000Z" itemprop="datePublished">2015-07-03</time>
+      <a href="/2015/07/03/battery-discharge/" class="article-date">
+  	<time datetime="2015-07-03T05:32:49.000Z" itemprop="datePublished">2015-07-03</time>
 </a>
     </div>
   
@@ -195,17 +196,43 @@
       <input type="hidden" class="isFancy" />
     
     
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/07/03/battery-discharge/">battery-discharge</a>
+    </h1>
+  
+
+      </header>
+      
+    
     <div class="article-entry" itemprop="articleBody">
       
-        <hr>
-<h2 id="layout:_default">layout: default</h2><p></p><h1>Not found <span frown="">:(</span></h1><br>    <p>Sorry, but the page you were trying to view does not exist.</p><p></p>
+        <h1 id="某一块电池放电曲线测试纪录">某一块电池放电曲线测试纪录</h1><h3 id="OverView">OverView</h3><pre><code>要求 电池曲线最后拟合函数百分比大致连续 精度<span class="number">2</span><span class="comment">%</span>
+</code></pre><h3 id="准备">准备</h3><pre><code><span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>E = U<span class="keyword">*</span>I<span class="keyword">*</span>T (E为能量)<span class="keyword">*</span><span class="keyword">*</span><span class="keyword">*</span>
+</code></pre><p>测试的时候保证放电电流恒定，保证测量的时间间隔恒定，然后读取电压的 AD采样。写好测试代码，将数据存储在mcu中。</p>
+<h3 id="读取数据">读取数据</h3><p>电池标称50mAH,测试的时候以13mAH的电流放电，每个一分钟纪录一个样本点，最后得到230个数据点。</p>
+<h3 id="图例">图例</h3><p><img src="/img/disCharge_line_signal.png" alt="icon"></p>
+<h3 id="python代码">python代码</h3><p><a href="https://github.com/M2shad0w/py_tool/blob/master/battery.py" target="_blank" rel="external">代码</a></p>
 
       
     </div>
     
-  </div>
-  
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/python/">python</a></li></ul>
+	</div>
+
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
     
+  </div>
   
 </article>
 
@@ -214,6 +241,9 @@
 
 
 
+
+  
+  
 </div>
       <footer id="footer">
   <div class="outer">
@@ -237,7 +267,7 @@
 		fancybox: true,
 		mathjax: true,
 		animate: true,
-		isHome: false,
+		isHome: true,
 		isPost: false,
 		isArchive: false,
 		isTag: false,
