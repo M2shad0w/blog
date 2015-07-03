@@ -243,6 +243,230 @@
 
 
   
+    <article id="post-focus" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/06/08/focus/" class="article-date">
+  	<time datetime="2015-06-08T14:45:47.000Z" itemprop="datePublished">2015-06-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/06/08/focus/">focus</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <blockquote>
+<p>专注</p>
+</blockquote>
+<p>在某一时刻专注，尽全力去做好一件事情，不轻易被纷杂的外事所干扰，对于现在的我特别的重要。                  ————题记</p>
+<hr>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-e5-b7-a5-e4-bd-9c-e7-8e-af-e5-a2-83" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/01/03/e5-b7-a5-e4-bd-9c-e7-8e-af-e5-a2-83/" class="article-date">
+  	<time datetime="2015-01-03T11:47:41.000Z" itemprop="datePublished">2015-01-03</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2015/01/03/e5-b7-a5-e4-bd-9c-e7-8e-af-e5-a2-83/">工作环境</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>最近一段时间事情真是很多，心情也常是变化无常，现在终于安静下来了，这样我也可以好好的回顾一下，写一点东西了。<br>网络连接速度、开发环境相比是很多程序员在面对工作选择的一个重要的参考标准。当然工资水平差不多的情况下。在处处受限的环境中，不断的迭代获取知识，进步成长就显得十分的困难。<br>最近换了一份工作，加入了一家很有活力的公司，具体是做可穿戴设备的。工作环境很好，周围的人也不错，对于刚毕业的我来说，在创业团队中历练是很不错的选择。公司坐落在未来科技城海创园，对面就是阿里巴巴西溪淘宝城。<br>好吧，在好的环境中，希望自己在各方面都有长足进步！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/thinking/">thinking</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-e6-a3-80-e9-aa-8c80-e7-ab-af-e5-8f-a3-e6-98-af-e5-90-a6-e6-89-93-e5-bc-80" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/10/14/e6-a3-80-e9-aa-8c80-e7-ab-af-e5-8f-a3-e6-98-af-e5-90-a6-e6-89-93-e5-bc-80/" class="article-date">
+  	<time datetime="2014-10-13T17:38:07.000Z" itemprop="datePublished">2014-10-14</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/10/14/e6-a3-80-e9-aa-8c80-e7-ab-af-e5-8f-a3-e6-98-af-e5-90-a6-e6-89-93-e5-bc-80/">检验80端口是否打开</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>装服务器中….<br>基本配置完，通过<br><code>netstat -an|grep tcp</code><br>查看端口是否开启，显示开启。<br>但是就是浏览器无法访问改地址。</p>
+<p>后来得知可以通过telnet xxx.xxx.xxx.xxx 80来查看端口确实是否打开。</p>
+<p>因此用telnet测试果然没有打开。<br>通过命令<br><code>/sbin/iptables -I INPUT -p tcp --dport 80 -j ACCEPT</code><br>打开端口，测试成功。</p>
+<h5 id="在一台服务器上安装esxi">在一台服务器上安装esxi</h5><hr>
+<p>半年前，还在上一家公司的时候，做过一段时间的运维，项目主要是在服务器上挂载一个中转服务。当时公司很缺人手，然后我对这一块比较感兴趣，因此承担了这个任务。从一台性能比较高的服务器上安装esxi，虚拟几个虚拟服务器，虚拟机分别安装好 <strong>windows server2012</strong> 和 <strong>centos 6</strong>，因为中转服务的整个环境时php平台的，所以服务器环境得配置成最佳组合lamp，在用yum配置运行环境依赖的一大堆包之后，想要测试端口是否开启，通过<code>netstat -an|grep tcp</code>显示开启，但是浏览器缺无法访问，感觉很是奇怪，后来想到tcp／ip的书上其实有写，通过telnet 命令解决了这个问题。<br>说实话，其实这些遇到的问题在书籍上都是有的，以往看书的时候总觉得这些知识点很是简单，忽略了其在实际工程项目中重要性。念书不要半瓶子醋晃荡响，深刻认识了，能在以后解决很多时间！</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/os/">os</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
+    <article id="post-python-e9-9a-8f-e6-83-b3-e5-bd-95" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2014/09/07/python-e9-9a-8f-e6-83-b3-e5-bd-95/" class="article-date">
+  	<time datetime="2014-09-06T21:59:51.000Z" itemprop="datePublished">2014-09-07</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2014/09/07/python-e9-9a-8f-e6-83-b3-e5-bd-95/">python随想录</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>python在过去的一年里陪伴了，我拿他做自动化测试。他简洁漂亮的语法，轻松简单的帮我解决了许多问题，是一个优秀的代码工具。</p>
+
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/python/">python</a>
+	</div>
+
+
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
+
+  
   
 </div>
       <footer id="footer">
