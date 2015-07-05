@@ -1,6 +1,6 @@
 title: "python随想录"
 date: 2014-09-07 05:59:51
-tags:
+tags: python
 id: 22
 categories:
   - python

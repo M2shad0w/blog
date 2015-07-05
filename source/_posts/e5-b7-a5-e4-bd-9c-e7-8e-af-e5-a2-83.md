@@ -1,6 +1,6 @@
 title: "工作环境"
 date: 2015-01-03 19:47:41
-tags:
+tags: thinking
 id: 103
 categories:
   - thinking
