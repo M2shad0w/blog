@@ -67,7 +67,7 @@ theme: yilia #landscape
 avatar: http://7xk4vd.com1.z0.glb.clouddn.com/gitOctocat.jpg
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy: 
+deploy: o
   type: git
   repo: git@github.com:M2shad0w/m2shad0w.github.io.git
   branch: master
