@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: m2shad0w
-subtitle: follow the wind
-description: make life
-author: Apollo Zhu
-language: zh-Hans
+title: Hexo
+subtitle:
+description:
+author: John Doe
+language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://m2shad0w.com
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -63,21 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: yilia #landscape
-avatar: http://7xk4vd.com1.z0.glb.clouddn.com/gitOctocat.jpg
+theme: landscape
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy: 
-  type: git
-  repo: git@github.com:M2shad0w/m2shad0w.github.io.git
-  branch: master
-  message: 
-social:
-  github: https://github.com/m2shad0w
-  twitter: https://twitter.com/m2shad0w
-  weibo: http://weibo.com/m2shad0w
-backup:
-  type: git
-  theme: 
-  repo: git@github.com:M2shad0w/backup.git,master
-  message: 
+deploy:
+  type:
