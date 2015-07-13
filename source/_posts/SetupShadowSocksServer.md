@@ -16,6 +16,7 @@ categories:
 * 然后点击 Create Droplet 大约等个30s就帮你建好了vps
 * 会发送root的密码到你的注册邮箱，初次登录修改掉密码
 ![注册界面](http://7xk4vd.com1.z0.glb.clouddn.com/shadowsocks1.jpg)
+
 ## shadowsocks环境
 * 安装 Python-Gevent，由于gevent依赖libevent和python-devel。
 		yum install libevent
