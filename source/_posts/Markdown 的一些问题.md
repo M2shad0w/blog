@@ -14,7 +14,7 @@ categories:
 ###Markdown 实际上采用的是类似 Python 和 Haskell 的 layout 语法。
 
 我已经在一篇英文博文里提到了 layout 语法的多种问题。因为空格的数量决定了文档的结构，这种文档格式相当的“脆弱”。稍微少打一两个空格，就会出现不可预测的结果。这种现象在“itemize”内部的代码块最容易出现。因为每个 item 带来了缩进，所以内部的代码必须比 item 的缩进多4个空格，才能被排到正确的位置。比如我转换博文的时候多次出现以下的情况：
-
+![问题](http://www.yinwang.org/images/markdown-mistake.png)
 
 
 这里的问题是，代码里的第一行 helloworld z = let x = 1 因为缩进不够，被放到了代码块外面。但是为了准确的缩进所耗费的精力，其实比直接打 &lt;pre&gt;
