@@ -45,3 +45,5 @@ categories:
 		}
 * 启动服务
 		ssserver -c /etc/shadowsocks.json
+		
+## 路由器刷op装ss
