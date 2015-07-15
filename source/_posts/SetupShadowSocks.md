@@ -1,4 +1,4 @@
-title: SetupShadowSocksServer
+title: SetupShadowSocks
 date: 2015-07-07 19:25:32
 tags: 科学上网
 categories:
