@@ -1,0 +1,60 @@
+# Header
+menu:
+  主页: /
+  所有文章: /archives
+  随笔: /tags/随笔
+  aboutme: /about
+
+# SubNav
+subnav:
+  github: "https://github.com/m2shad0w"
+  weibo: "http://weibo.com/712310784"
+  rss: "#"
+  zhihu: "#"
+  #douban: "#"
+  #mail: "#"
+  #facebook: "#"
+  #google: "#"
+  #twitter: "#"
+  #linkedin: "#"
+
+rss: /atom.xml
+
+# Content
+excerpt_link: more
+fancybox: true
+mathjax: true
+
+# 是否开启动画效果
+animate: true
+
+# 是否在新窗口打开链接
+open_in_new: false
+
+# Miscellaneous
+google_analytics: ''
+favicon: http://7xk4vd.com1.z0.glb.clouddn.com/bitbug_favicon.png
+#你的头像url
+avatar: http://7xk4vd.com1.z0.glb.clouddn.com/my.jpg
+#是否开启分享
+share: true
+#是否开启多说评论，填写你在多说申请的项目名称 duoshuo: duoshuo-key
+#若使用disqus，请在博客config文件中填写disqus_shortname，并关闭多说评论
+#duoshuo: true
+#是否开启云标签
+tagcloud: true
+
+#是否开启友情链接
+#不开启——
+#friends: false
+#开启——
+friends:
+  matt: http://tang3w.com/
+  onevcat: http://onevcat.com/
+  赵的小窝: http://zhaojin97.cn/
+  
+#是否开启“关于我”。
+#不开启——
+#aboutme: false
+#开启——
+aboutme: 飞翔的🐎
