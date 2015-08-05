@@ -7,7 +7,7 @@ m2shad0w 是一位程序员，工作在杭州，觉得代码很有趣，通过�
 
 我的联系方式：
 	
-	电子邮箱：apllo.zhu@qq.com
+	电子邮箱：apollo.zhu@qq.com
 
 # 信仰
 
