@@ -79,9 +79,4 @@ deploy:
 social:
   github: https://github.com/m2shad0w
   twitter: https://twitter.com/m2shad0w
-  weibo: http://weibo.com/m2shad0w
-backup:
-  type: git
-  theme: 
-  repo: git@github.com:M2shad0w/backup.git,master
-  message: 
+  weibo: http://weibo.com/m2shad0w 
