@@ -32,7 +32,7 @@ animate: true
 open_in_new: false
 
 # Miscellaneous
-google_analytics: ''
+google_analytics: 'UA-66782235-1'
 favicon: http://7xk4vd.com1.z0.glb.clouddn.com/bitbug_favicon.png
 #你的头像url
 avatar: http://7xk4vd.com1.z0.glb.clouddn.com/my.jpg
