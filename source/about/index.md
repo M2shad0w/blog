@@ -3,7 +3,7 @@ date: 2015-07-03 13:21:42
 ---
 # 关于m2shad0w
 
-m2shad0w 是一位程序员，工作在杭州，觉得代码很有趣，通过智慧改变一些行为方式。对智能硬件，前端，大数据分析，o2o等相关技术十分感兴趣，曾供职在安防新秀[uniview](http://www.uniview.com/)，智能手环[bong](http://www.bong.cn)。
+m2shad0w is a programer。对智能硬件，前端，大数据分析，o2o等相关技术十分感兴趣，曾供职在安防新秀[uniview](http://www.uniview.com/)，智能手环[bong](http://www.bong.cn)。
 
 我的联系方式：
 	
