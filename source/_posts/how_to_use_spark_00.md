@@ -1,4 +1,4 @@
-title: how_to_use_spark_00
+title: how_to_use_spark
 date: 2015-12-21 10:04:35
 tags: spark
 categories: bigdata
