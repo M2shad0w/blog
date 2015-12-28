@@ -1,11 +1,10 @@
-title: how_to_use_spark
+title: 数据平台spark
 date: 2015-12-21 10:04:35
 tags: spark
 categories: bigdata
  
 ---
 
-# 基本安装
 ## 简介
 Apache Spark 是一个快速、通用的计算机集群系统。它提供高度优化 Java, Scala, Python and R 的高级接口来支持一般的执行流程，同时支持丰富的高层及的工具集合，包括 [Spark SQL](#)来处理关系型数据，[MLlib](#)来处理机器学习，[GraphX](#)来处理图运算，[Spark Streaming](#)
 <!-- more -->

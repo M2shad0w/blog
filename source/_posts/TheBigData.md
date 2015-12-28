@@ -1,6 +1,8 @@
 title: TheBigData
 date: 2015-09-06 13:46:34
-tags: DATA
+tags: data
+categories:
+  - bigdata
  
 ---
 ### 用户数据
