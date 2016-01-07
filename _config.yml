@@ -7,7 +7,7 @@ title: m2shad0w
 subtitle: follow the wind
 description: make life
 author: Apollo Zhu
-language: zh-Hans
+language: zh-hk
 timezone:
 
 # URL
@@ -67,7 +67,8 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-theme: yilia #landscape
+# theme: yilia #landscape
+theme: next
 avatar: http://7xk4vd.com1.z0.glb.clouddn.com/gitOctocat.jpg
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
@@ -76,7 +77,3 @@ deploy:
   repo: git@github.com:M2shad0w/m2shad0w.github.io.git
   branch: master
   message: 
-social:
-  github: https://github.com/m2shad0w
-  twitter: https://twitter.com/m2shad0w
-  weibo: http://weibo.com/m2shad0w 

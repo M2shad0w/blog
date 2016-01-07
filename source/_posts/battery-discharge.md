@@ -30,11 +30,11 @@ $E = U \cdot I \cdot T$ (E为能量)
 ```python
 import numpy as np
 def line(p, a): ＃拟合函数
-	y = np.array(p)
-	x = np.array(a)
-	z = np.polyfit(x, y, 1) # x,y是两个列表 1是拟合阶数
-	p = np.poly1d(z)
-	print(p) # 拟合公式
+    y = np.array(p)
+    x = np.array(a)
+    z = np.polyfit(x, y, 1) # x,y是两个列表 1是拟合阶数
+    p = np.poly1d(z)
+    print(p) # 拟合公式
 ```
  
 拟合一阶函数如下
