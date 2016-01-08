@@ -1,57 +1,11 @@
-<!doctype html>
-<html class="theme-next   use-motion ">
+<!DOCTYPE html>
+<html>
 <head>
-  <meta charset="UTF-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
-
-
-
-<meta http-equiv="Cache-Control" content="no-transform" />
-<meta http-equiv="Cache-Control" content="no-siteapp" />
-
-
-
-
-
-
-
-
-
-
-
-
-  <link href="/vendors/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css"/>
-
-
-
-
-  <link href="//fonts.googleapis.com/css?family=Lato:300,400,700,400italic&subset=latin,latin-ext" rel="stylesheet" type="text/css">
-
-
-
-<link href="/vendors/font-awesome/css/font-awesome.min.css?v=4.4.0" rel="stylesheet" type="text/css" />
-
-<link href="/css/main.css?v=0.4.5.2" rel="stylesheet" type="text/css" />
-
-
-  <meta name="keywords" content="spark," />
-
-
-
-
-
-
-
-
-  <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico?v=0.4.5.2" />
-
-
-
-
-
-
-<meta name="description" content="0x00 起因学习spark udf的功能，在网络上看到有同学拿spark分析2013年某酒店泄露出来2000千万的开房数据。">
+  <meta charset="utf-8">
+  
+  <title>spark分析2000千万开房数据 | m2shad0w</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="0x00 起因学习spark udf的功能，在网络上看到有同学拿spark分析2013年某酒店泄露出来2000千万的开房数据。">
 <meta property="og:type" content="article">
 <meta property="og:title" content="spark分析2000千万开房数据">
 <meta property="og:url" content="http://m2shad0w.com/2015/12/24/spark001/index.html">
@@ -61,213 +15,228 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="spark分析2000千万开房数据">
 <meta name="twitter:description" content="0x00 起因学习spark udf的功能，在网络上看到有同学拿spark分析2013年某酒店泄露出来2000千万的开房数据。">
-
-
-
-<script type="text/javascript" id="hexo.configuration">
-  var CONFIG = {
-    scheme: '',
-    sidebar: 'post',
-    motion: true
-  };
-</script>
-
-  <title> spark分析2000千万开房数据 | m2shad0w </title>
+  
+    <link rel="alternative" href="/atom.xml" title="m2shad0w" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="http://7xk4vd.com1.z0.glb.clouddn.com/faviconwhite-letter-m-centered-inside-black-circle-hi.png">
+  
+  <link rel="stylesheet" href="/css/style.css" type="text/css">
 </head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+	<header id="header" class="inner">
+		<a href="/" class="profilepic">
+			
+			<img lazy-src="http://7xk4vd.com1.z0.glb.clouddn.com/my.jpg" class="js-avatar">
+			
+		</a>
 
-<body itemscope itemtype="http://schema.org/WebPage" lang="zh-hk">
+		<hgroup>
+		  <h1 class="header-author"><a href="/">Apollo Zhu</a></h1>
+		</hgroup>
 
-  <!--[if lte IE 8]>
-  <div style=' clear: both; height: 59px; padding:0 0 0 15px; position: relative;margin:0 auto;'>
-    <a href="http://windows.microsoft.com/en-US/internet-explorer/products/ie/home?ocid=ie6_countdown_bannercode">
-      <img src="http://7u2nvr.com1.z0.glb.clouddn.com/picouterie.jpg" border="0" height="42" width="820"
-           alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today or use other browser ,like chrome firefox safari."
-           style='margin-left:auto;margin-right:auto;display: block;'/>
-    </a>
-  </div>
-<![endif]-->
-  
+		
+		<p class="header-subtitle">follow the wind</p>
+		
 
+		
+			<div class="switch-btn">
+				<div class="icon">
+					<div class="icon-ctn">
+						<div class="icon-wrap icon-house" data-idx="0">
+							<div class="birdhouse"></div>
+							<div class="birdhouse_holes"></div>
+						</div>
+						<div class="icon-wrap icon-ribbon hide" data-idx="1">
+							<div class="ribbon"></div>
+						</div>
+						
+						<div class="icon-wrap icon-link hide" data-idx="2">
+							<div class="loopback_l"></div>
+							<div class="loopback_r"></div>
+						</div>
+						
+						
+						<div class="icon-wrap icon-me hide" data-idx="3">
+							<div class="user"></div>
+							<div class="shoulder"></div>
+						</div>
+						
+					</div>
+					
+				</div>
+				<div class="tips-box hide">
+					<div class="tips-arrow"></div>
+					<ul class="tips-inner">
+						<li>菜单</li>
+						<li>标签</li>
+						
+						<li>友情链接</li>
+						
+						
+						<li>关于我</li>
+						
+					</ul>
+				</div>
+			</div>
+		
 
+		<div class="switch-area">
+			<div class="switch-wrap">
+				<section class="switch-part switch-part1">
+					<nav class="header-menu">
+						<ul>
+						
+							<li><a href="/">主页</a></li>
+				        
+							<li><a href="/archives">文章</a></li>
+				        
+							<li><a href="/about">关于</a></li>
+				        
+						</ul>
+					</nav>
+					<nav class="header-nav">
+						<div class="social">
+							
+								<a class="github" target="_blank" href="https://github.com/m2shad0w" title="github">github</a>
+					        
+								<a class="weibo" target="_blank" href="http://weibo.com/712310784" title="weibo">weibo</a>
+					        
+								<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+					        
+								<a class="mail" target="_blank" href="/#" title="mail">mail</a>
+					        
+						</div>
+					</nav>
+				</section>
+				
+				
+				<section class="switch-part switch-part2">
+					<div class="widget tagcloud" id="js-tagcloud">
+						<a href="/tags/data/" style="font-size: 10px;">data</a> <a href="/tags/hadoop/" style="font-size: 10px;">hadoop</a> <a href="/tags/network/" style="font-size: 10px;">network</a> <a href="/tags/python/" style="font-size: 10px;">python</a> <a href="/tags/spark/" style="font-size: 20px;">spark</a>
+					</div>
+				</section>
+				
+				
+				
+				<section class="switch-part switch-part3">
+					<div id="js-friends">
+					
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://tang3w.com/">matt</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://onevcat.com/">onevcat</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://zhaojin97.cn/">赵的小窝</a>
+			        
+			          <a target="_blank" class="main-nav-link switch-friends-link" href="http://dbanotes.net/">Fenng</a>
+			        
+			        </div>
+				</section>
+				
 
-
-
-
-  <div class="container one-column page-post-detail">
-    <div class="headband"></div>
-
-    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
-      <div class="header-inner"><div class="site-meta ">
-  
-
-  <div class="custom-logo-site-title">
-    <a href="/"  class="brand" rel="start">
-      <span class="logo-line-before"><i></i></span>
-      <span class="site-title">m2shad0w</span>
-      <span class="logo-line-after"><i></i></span>
-    </a>
-  </div>
-  <p class="site-subtitle">follow the wind</p>
+				
+				
+				<section class="switch-part switch-part4">
+				
+					<div id="js-aboutme">飞翔的🐎</div>
+				</section>
+				
+			</div>
+		</div>
+	</header>				
 </div>
-
-<div class="site-nav-toggle">
-  <button>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-    <span class="btn-bar"></span>
-  </button>
-</div>
-
-<nav class="site-nav">
-  
-
-  
-    <ul id="menu" class="menu ">
-      
-        
-        <li class="menu-item menu-item-home">
-          <a href="/" rel="section">
-            
-              <i class="menu-item-icon fa fa-home fa-fw"></i> <br />
-            
-            首頁
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-categories">
-          <a href="/categories" rel="section">
-            
-              <i class="menu-item-icon fa fa-th fa-fw"></i> <br />
-            
-            分類
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-archives">
-          <a href="/archives" rel="section">
-            
-              <i class="menu-item-icon fa fa-archive fa-fw"></i> <br />
-            
-            歸檔
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-tags">
-          <a href="/tags" rel="section">
-            
-              <i class="menu-item-icon fa fa-tags fa-fw"></i> <br />
-            
-            標籤
-          </a>
-        </li>
-      
-        
-        <li class="menu-item menu-item-about">
-          <a href="/about" rel="section">
-            
-              <i class="menu-item-icon fa fa-user fa-fw"></i> <br />
-            
-            關於
-          </a>
-        </li>
-      
-
-      
-      
-    </ul>
-  
-
-  
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+  	<div class="overlay">
+  		<div class="slider-trigger"></div>
+  		<h1 class="header-author js-mobile-header hide">Apollo Zhu</h1>
+  	</div>
+	<div class="intrude-less">
+		<header id="header" class="inner">
+			<div class="profilepic">
+				<img lazy-src="http://7xk4vd.com1.z0.glb.clouddn.com/my.jpg" class="js-avatar">
+			</div>
+			<hgroup>
+			  <h1 class="header-author">Apollo Zhu</h1>
+			</hgroup>
+			
+			<p class="header-subtitle">follow the wind</p>
+			
+			<nav class="header-menu">
+				<ul>
+				
+					<li><a href="/">主页</a></li>
+		        
+					<li><a href="/archives">文章</a></li>
+		        
+					<li><a href="/about">关于</a></li>
+		        
+		        <div class="clearfix"></div>
+				</ul>
+			</nav>
+			<nav class="header-nav">
+				<div class="social">
+					
+						<a class="github" target="_blank" href="https://github.com/m2shad0w" title="github">github</a>
+			        
+						<a class="weibo" target="_blank" href="http://weibo.com/712310784" title="weibo">weibo</a>
+			        
+						<a class="rss" target="_blank" href="/#" title="rss">rss</a>
+			        
+						<a class="mail" target="_blank" href="/#" title="mail">mail</a>
+			        
+				</div>
+			</nav>
+		</header>				
+	</div>
 </nav>
-
- </div>
-    </header>
-
-    <main id="main" class="main">
-      <div class="main-inner">
-        <div id="content" class="content">
-          
-
-  <div id="posts" class="posts-expand">
+      <div class="body-wrap"><article id="post-spark001" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2015/12/24/spark001/" class="article-date">
+  	<time datetime="2015-12-24T07:30:18.000Z" itemprop="datePublished">2015-12-24</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
     
-
-  
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-
+      <input type="hidden" class="isFancy" />
     
-      <header class="post-header">
-
+    
+      <header class="article-header">
         
-        
-          <h1 class="post-title" itemprop="name headline">
-            
-            
-              
-                spark分析2000千万开房数据
-              
-            
-          </h1>
-        
+  
+    <h1 class="article-title" itemprop="name">
+      spark分析2000千万开房数据
+    </h1>
+  
 
-        <div class="post-meta">
-          <span class="post-time">
-            發表於
-            <time itemprop="dateCreated" datetime="2015-12-24T15:30:18+08:00" content="2015-12-24">
-              2015-12-24
-            </time>
-          </span>
-
-          
-            <span class="post-category" >
-              &nbsp; | &nbsp; 分類於
-              
-                <span itemprop="about" itemscope itemtype="https://schema.org/Thing">
-                  <a href="/categories/bigdata/" itemprop="url" rel="index">
-                    <span itemprop="name">bigdata</span>
-                  </a>
-                </span>
-
-                
-                
-
-              
-            </span>
-          
-
-          
-            
-              <span class="post-comments-count">
-              &nbsp; | &nbsp;
-              <a href="/2015/12/24/spark001/#comments" itemprop="discussionUrl">
-                <span class="post-comments-count disqus-comment-count" data-disqus-identifier="2015/12/24/spark001/" itemprop="commentsCount"></span>
-              </a>
-            </span>
-            
-          
-
-          
-
-        </div>
       </header>
+      
+      <div class="article-info article-info-post">
+        
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/spark/">spark</a></li></ul>
+	</div>
+
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/bigdata/">bigdata</a>
+	</div>
+
+
+        <div class="clearfix"></div>
+      </div>
+      
     
-
-
-    <div class="post-body">
-
+    <div class="article-entry" itemprop="articleBody">
       
-      
-
-      
-        <span itemprop="articleBody"><h3 id="0x00_起因"><strong>0x00 起因</strong></h3><p>学习spark udf的功能，在网络上看到有同学拿spark分析2013年某酒店泄露出来2000千万的开房数据。<br><a id="more"></a></p>
+        <h3 id="0x00_起因"><strong>0x00 起因</strong></h3><p>学习spark udf的功能，在网络上看到有同学拿spark分析2013年某酒店泄露出来2000千万的开房数据。<br><a id="more"></a></p>
 <h3 id="0x01_分析数据"><strong>0x01 分析数据</strong></h3><p>这个数据实在是个好样本，于是就很高兴的去找数据，打算也来分析一把。找到csv格式的数据，合起来大小800多M。<br>现在spark－shell中load，快速分析一下。<br>先定义两个函数：</p>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">toInt</span>(</span>s: <span class="type">String</span>):<span class="type">Int</span> = &#123;</span><br><span class="line">  <span class="keyword">try</span> &#123;</span><br><span class="line">    s.toInt</span><br><span class="line">  &#125; <span class="keyword">catch</span> &#123;</span><br><span class="line">    <span class="keyword">case</span> e:<span class="type">Exception</span> =&gt; <span class="number">9999</span></span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <figure class="highlight scala"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">birthday2constellation</span>(</span>birthday: <span class="type">String</span>):<span class="type">String</span> = &#123;</span><br><span class="line">  <span class="keyword">var</span> rt = <span class="string">"未知"</span></span><br><span class="line">  <span class="keyword">if</span> (birthday.length == <span class="number">8</span>) &#123;</span><br><span class="line">    <span class="keyword">val</span> md = toInt(birthday.substring(<span class="number">4</span>))</span><br><span class="line">    <span class="keyword">if</span> (md &gt;= <span class="number">120</span> &amp; md &lt;= <span class="number">219</span>)</span><br><span class="line">      rt = <span class="string">"水瓶"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">220</span> &amp; md &lt;= <span class="number">320</span>)</span><br><span class="line">      rt = <span class="string">"双鱼"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">321</span> &amp; md &lt;= <span class="number">420</span>)</span><br><span class="line">      rt = <span class="string">"白羊"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">421</span> &amp; md &lt;= <span class="number">521</span>)</span><br><span class="line">      rt = <span class="string">"金牛"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">522</span> &amp; md &lt;= <span class="number">621</span>)</span><br><span class="line">      rt = <span class="string">"双子"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">622</span> &amp; md &lt;= <span class="number">722</span>)</span><br><span class="line">      rt = <span class="string">"巨蟹"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">723</span> &amp; md &lt;= <span class="number">823</span>)</span><br><span class="line">      rt = <span class="string">"狮子"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">824</span> &amp; md &lt;= <span class="number">923</span>)</span><br><span class="line">      rt = <span class="string">"处女"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">924</span> &amp; md &lt;= <span class="number">1023</span>)</span><br><span class="line">      rt = <span class="string">"天秤"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">1024</span> &amp; md &lt;= <span class="number">1122</span>)</span><br><span class="line">      rt = <span class="string">"天蝎"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> (md &gt;= <span class="number">1123</span> &amp; md &lt;= <span class="number">1222</span>)</span><br><span class="line">      rt = <span class="string">"射手"</span></span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">if</span> ((md &gt;= <span class="number">1223</span> &amp; md &lt;= <span class="number">1231</span>) | (md &gt; <span class="number">101</span> &amp; md &lt;= <span class="number">119</span>))</span><br><span class="line">      rt = <span class="string">"摩蝎"</span></span><br><span class="line">    <span class="keyword">else</span></span><br><span class="line">      rt = <span class="string">"未知"</span></span><br><span class="line">  &#125;</span><br><span class="line">  <span class="keyword">return</span> rt</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -283,467 +252,144 @@
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&#30333;&#32650; 1410462&#10;&#22788;&#22899; 1666768&#10;&#23556;&#25163; 1615660&#10;&#24040;&#34809; 1498724&#10;&#25705;&#34638; 1441086&#10;&#22825;&#31204; 1897450&#10;&#37329;&#29275; 1406847&#10;&#22825;&#34638; 1820476&#10;&#27700;&#29942; 1636084&#10;&#21452;&#40060; 1510535&#10;&#29422;&#23376; 1614266&#10;&#21452;&#23376; 1406631&#10;&#26410;&#30693; 1126393&#10;&#20849;&#38656; 46.42&#31186;</span><br></pre></td></tr></table></figure>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br><span class="line">79</span><br><span class="line">80</span><br><span class="line">81</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># coding=utf-8</span></span><br><span class="line"><span class="comment"># !/usr/bin/env python</span></span><br><span class="line"><span class="keyword">import</span> os</span><br><span class="line"><span class="keyword">import</span> time</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">GetFileList</span><span class="params">(dir, fileList)</span>:</span></span><br><span class="line">    newDir = dir</span><br><span class="line">    <span class="keyword">if</span> os.path.isfile(dir):</span><br><span class="line">        fileList.append(dir.decode(<span class="string">'utf-8'</span>))</span><br><span class="line">    <span class="keyword">elif</span> os.path.isdir(dir):</span><br><span class="line">        <span class="keyword">for</span> s <span class="keyword">in</span> os.listdir(dir):</span><br><span class="line">            newDir = os.path.join(dir,s)</span><br><span class="line">            GetFileList(newDir, fileList)</span><br><span class="line">    <span class="keyword">return</span> fileList</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">countFile</span><span class="params">()</span>:</span></span><br><span class="line">    constellation_dict = &#123;&#125;</span><br><span class="line">    list = GetFileList(<span class="string">"/Users/m2shad0w/Desktop/hotel/"</span>, [])</span><br><span class="line">    <span class="keyword">for</span> e <span class="keyword">in</span> list:</span><br><span class="line">        <span class="comment"># print e</span></span><br><span class="line">        file = open(e)</span><br><span class="line">        <span class="keyword">for</span> line <span class="keyword">in</span> file:</span><br><span class="line">            line = line.split(<span class="string">","</span>, <span class="number">7</span>)</span><br><span class="line">            <span class="comment"># print(line[6])</span></span><br><span class="line">            <span class="keyword">if</span> len(line) &gt;= <span class="number">7</span>:</span><br><span class="line">                re = birthday2constellation(line[<span class="number">6</span>])</span><br><span class="line">                <span class="comment"># print(re)</span></span><br><span class="line">                <span class="keyword">if</span> re <span class="keyword">in</span> constellation_dict:</span><br><span class="line">                    constellation_dict[re] += <span class="number">1</span></span><br><span class="line">                <span class="keyword">else</span>:</span><br><span class="line">                    constellation_dict.setdefault(re, <span class="number">1</span>)</span><br><span class="line">    <span class="keyword">for</span> key <span class="keyword">in</span> constellation_dict:</span><br><span class="line">            <span class="keyword">print</span> key, constellation_dict[key]</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">birthday2constellation</span><span class="params">(bitrhday)</span>:</span></span><br><span class="line">    rt = <span class="string">"未知"</span></span><br><span class="line">    <span class="keyword">if</span> (len(bitrhday) == <span class="number">8</span>) <span class="keyword">and</span> (bitrhday != <span class="string">"Birthday"</span>):</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            md = int(bitrhday[<span class="number">4</span>:])</span><br><span class="line">            <span class="comment"># print(md)</span></span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            <span class="comment"># print("空字段")</span></span><br><span class="line">            md = <span class="number">99999</span></span><br><span class="line"></span><br><span class="line">        <span class="keyword">if</span> (md &gt;= <span class="number">120</span>) <span class="keyword">and</span> (md &lt;= <span class="number">219</span>):</span><br><span class="line">            rt = <span class="string">"水瓶"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">220</span>) <span class="keyword">and</span> (md &lt;= <span class="number">320</span>):</span><br><span class="line">            rt = <span class="string">"双鱼"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">321</span>) <span class="keyword">and</span> md &lt;= <span class="number">420</span>:</span><br><span class="line">            rt = <span class="string">"白羊"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">421</span>) <span class="keyword">and</span> md &lt;= <span class="number">521</span>:</span><br><span class="line">            rt = <span class="string">"金牛"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">522</span>) <span class="keyword">and</span> md &lt;= <span class="number">621</span>:</span><br><span class="line">            rt = <span class="string">"双子"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">622</span>) <span class="keyword">and</span> md &lt;= <span class="number">722</span>:</span><br><span class="line">            rt = <span class="string">"巨蟹"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">723</span>) <span class="keyword">and</span> md &lt;= <span class="number">823</span>:</span><br><span class="line">            rt = <span class="string">"狮子"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">824</span>) <span class="keyword">and</span> md &lt;= <span class="number">923</span>:</span><br><span class="line">            rt = <span class="string">"处女"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">924</span>) <span class="keyword">and</span> md &lt;= <span class="number">1023</span>:</span><br><span class="line">            rt = <span class="string">"天秤"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">1024</span>) <span class="keyword">and</span> md &lt;= <span class="number">1122</span>:</span><br><span class="line">            rt = <span class="string">"天蝎"</span></span><br><span class="line">        <span class="keyword">elif</span> (md &gt;= <span class="number">1123</span>) <span class="keyword">and</span> md &lt;= <span class="number">1222</span>:</span><br><span class="line">            rt = <span class="string">"射手"</span></span><br><span class="line">        <span class="keyword">elif</span> ((md &gt;= <span class="number">1223</span>) <span class="keyword">and</span> (md &lt;= <span class="number">1231</span>)) <span class="keyword">or</span> ((md &gt; <span class="number">101</span>) <span class="keyword">and</span> (md &lt;= <span class="number">119</span>)):</span><br><span class="line">            rt = <span class="string">"摩蝎"</span></span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            rt = <span class="string">"未知"</span></span><br><span class="line">    <span class="keyword">return</span> rt</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">main</span><span class="params">()</span>:</span></span><br><span class="line">    start = time.time()</span><br><span class="line">    countFile()</span><br><span class="line">    end = time.time()</span><br><span class="line">    <span class="keyword">print</span> end-start</span><br><span class="line"></span><br><span class="line"><span class="keyword">if</span> __name__ == <span class="string">'__main__'</span>:</span><br><span class="line">    main()</span><br></pre></td></tr></table></figure>
 <h3 id="0x04_总结"><strong>0x04 总结</strong></h3><p>scala 版本需要与spark编译的版本一致，spark1.5.2是用scala 2.10.5编译的。<br>定义class的时候需要放到object内，main function外，否者无法隐式转换到DataFrame。<br>数据需要过滤掉1月1日脏数据。</p>
-</span>
+
       
     </div>
-
-    <footer class="post-footer">
-      
-        <div class="post-tags">
-          
-            <a href="/tags/spark/" rel="tag">#spark</a>
-          
-        </div>
-      
-
-      
-        <div class="post-nav">
-          <div class="post-nav-next post-nav-item">
-            
-              <a href="/2015/12/21/how_to_use_spark_00/" rel="next" title="数据平台spark">
-                <i class="fa fa-chevron-left"></i> 数据平台spark
-              </a>
-            
-          </div>
-
-          <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2015/12/28/spark002/" rel="prev" title="spark SQL操作之关系型数据库">
-                spark SQL操作之关系型数据库 <i class="fa fa-chevron-right"></i>
-              </a>
-            
-          </div>
-        </div>
-      
-
-      
-      
-    </footer>
-  </article>
-
-
-
-    <div class="post-spread">
-      
-    </div>
-  </div>
-
-
-        </div>
-
-        
-
-
-        
-  <div class="comments" id="comments">
-    
-      <div id="disqus_thread">
-        <noscript>Please enable JavaScript to view the <a href="//disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-      </div>
     
   </div>
-
-
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2015/12/28/spark002/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption"><</strong>
+      <div class="article-nav-title">
+        
+          spark SQL操作之关系型数据库
+        
       </div>
-
-      
-        
+    </a>
   
-  <div class="sidebar-toggle">
-    <div class="sidebar-toggle-line-wrap">
-      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
-      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
-    </div>
-  </div>
-
-  <aside id="sidebar" class="sidebar">
-    <div class="sidebar-inner">
-
-      
-
-      
-        <ul class="sidebar-nav motion-element">
-          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
-            文章目錄
-          </li>
-          <li class="sidebar-nav-overview" data-target="site-overview">
-            本站概覽
-          </li>
-        </ul>
-      
-
-      <section class="site-overview sidebar-panel ">
-        <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
-          <img class="site-author-image" src="http://ww2.sinaimg.cn/large/63fe561egw1ezr7dgrbdrg208c07t0zo.gif" alt="Apollo Zhu" itemprop="image"/>
-          <p class="site-author-name" itemprop="name">Apollo Zhu</p>
-        </div>
-        <p class="site-description motion-element" itemprop="description">make life</p>
-        <nav class="site-state motion-element">
-          <div class="site-state-item site-state-posts">
-            <a href="/archives">
-              <span class="site-state-item-count">7</span>
-              <span class="site-state-item-name">文章</span>
-            </a>
-          </div>
-
-          <div class="site-state-item site-state-categories">
-            <a href="/categories">
-              <span class="site-state-item-count">3</span>
-              <span class="site-state-item-name">分類</span>
-              </a>
-          </div>
-
-          <div class="site-state-item site-state-tags">
-            <a href="/tags">
-              <span class="site-state-item-count">5</span>
-              <span class="site-state-item-name">標籤</span>
-              </a>
-          </div>
-
-        </nav>
-
-        
-
-        <div class="links-of-author motion-element">
-          
-            
-              <span class="links-of-author-item">
-                <a href="https://github.com/m2shad0w" target="_blank">
-                  
-                    <i class="fa fa-github"></i> GitHub
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://weibo.com/712310784" target="_blank">
-                  
-                    <i class="fa fa-weibo"></i> Weibo
-                  
-                </a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="" target="_blank">
-                  
-                    <i class="fa fa-globe"></i> Others
-                  
-                </a>
-              </span>
-            
-          
-        </div>
-
-        
-        
-
-        <div class="links-of-author motion-element">
-          
-            <p class="site-author-name">Links</p>
-            
-              <span class="links-of-author-item">
-                <a href="http://macshuo.com/" target="_blank">MacTalk</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://tang3w.com/" target="_blank">matt</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://onevcat.com/" target="_blank">onevcat</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://zhaojin97.cn/" target="_blank">赵的小窝</a>
-              </span>
-            
-              <span class="links-of-author-item">
-                <a href="http://dbanotes.net/" target="_blank">Fenng</a>
-              </span>
-            
-          
-        </div>
-
-      </section>
-
-      
-        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
-          <div class="post-toc-indicator-top post-toc-indicator">
-            <i class="fa fa-angle-double-up"></i>
-          </div>
-          <div class="post-toc">
-            
-              
-            
-            
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#0x00_起因"><span class="nav-number">1.</span> <span class="nav-text">0x00 起因</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x01_分析数据"><span class="nav-number">2.</span> <span class="nav-text">0x01 分析数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x02_返回结果"><span class="nav-number">3.</span> <span class="nav-text">0x02 返回结果</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x03_性能分析"><span class="nav-number">4.</span> <span class="nav-text">0x03 性能分析</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#0x04_总结"><span class="nav-number">5.</span> <span class="nav-text">0x04 总结</span></a></li></ol></div>
-            
-          </div>
-          <div class="post-toc-indicator-bottom post-toc-indicator">
-            <i class="fa fa-angle-double-down"></i>
-          </div>
-        </section>
-      
-
-    </div>
-  </aside>
-
-
-      
-    </main>
-
-    <footer id="footer" class="footer">
-      <div class="footer-inner">
-        <div class="copyright" >
   
-  &copy;  2013 - 
-  <span itemprop="copyrightYear">2016</span>
-  <span class="with-love">
-    <i class="icon-next-heart fa fa-heart"></i>
-  </span>
-  <span class="author" itemprop="copyrightHolder">Apollo Zhu</span>
-</div>
+    <a href="/2015/12/21/how_to_use_spark_00/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">数据平台spark</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
 
-<div class="powered-by">
-  由 <a class="theme-link" href="http://hexo.io">Hexo</a> 強力驅動
-</div>
+  
+</article>
 
-<div class="theme-info">
-  主題 -
-  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
-    NexT
-  </a>
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
 </div>
 
 
 
-      </div>
-    </footer>
 
-    <div class="back-to-top"></div>
-  </div>
 
-  <script type="text/javascript" src="/vendors/jquery/index.js?v=2.1.3"></script>
-
-  
-  
-
-  
-    
-    
-
-  
-
+<section id="comments">
+  <div id="disqus_thread"></div>
     <script type="text/javascript">
-      var disqus_shortname = 'm2shad0w';
-      var disqus_identifier = '2015/12/24/spark001/';
-      var disqus_title = 'spark分析2000千万开房数据';
-      var disqus_url = 'http://m2shad0w.com/2015/12/24/spark001/';
+    /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+    var disqus_shortname = 'm2shad0w'; // required: replace example with your forum shortname
 
-      function run_disqus_script(disqus_script){
-        var dsq = document.createElement('script');
-        dsq.type = 'text/javascript';
-        dsq.async = true;
-        dsq.src = '//' + disqus_shortname + '.disqus.com/' + disqus_script;
-        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-      }
+    /* * * DON'T EDIT BELOW THIS LINE * * */
+    (function() {
+      var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+      dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+      (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+    })();
+  </script>
+  <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+</section>
 
-      run_disqus_script('count.js');
-      
-        run_disqus_script('embed.js');
-      
-    </script>
-  
-
-
-  
-
-  
-  <script type="text/javascript" src="/vendors/fancybox/source/jquery.fancybox.pack.js"></script>
-  <script type="text/javascript" src="/js/fancy-box.js?v=0.4.5.2"></script>
-
-
-  <script type="text/javascript" src="/js/helpers.js?v=0.4.5.2"></script>
-  <script type="text/javascript" src="/vendors/velocity/velocity.min.js"></script>
-<script type="text/javascript" src="/vendors/velocity/velocity.ui.min.js"></script>
-
-<script type="text/javascript" src="/js/motion.js?v=0.4.5.2" id="motion.global"></script>
+</div>
+      <footer id="footer">
+  <div class="outer">
+    <div id="footer-info">
+    	<div class="footer-left">
+    		&copy; 2016 Apollo Zhu
+    	</div>
+      	<div class="footer-right">
+      		<a href="http://hexo.io/" target="_blank">Hexo</a>
+      	</div>
+    </div>
+  </div>
+</footer>
+    </div>
+    
+  <link rel="stylesheet" href="/fancybox/jquery.fancybox.css" type="text/css">
 
 
-  <script type="text/javascript" src="/vendors/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
-  <script type="text/javascript" src="/vendors/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+<script>
+	var yiliaConfig = {
+		fancybox: true,
+		mathjax: true,
+		animate: true,
+		isHome: false,
+		isPost: true,
+		isArchive: false,
+		isTag: false,
+		isCategory: false,
+		open_in_new: false
+	}
+</script>
+<script src="http://7.url.cn/edu/jslib/comb/require-2.1.6,jquery-1.9.1.min.js" type="text/javascript"></script>
+<script src="/js/main.js" type="text/javascript"></script>
 
-  
-  
-<script type="text/javascript" src="/js/bootstrap.scrollspy.js?v=0.4.5.2" id="bootstrap.scrollspy.custom"></script>
 
 
-<script type="text/javascript" id="sidebar.toc.highlight">
-  $(document).ready(function () {
-    var tocSelector = '.post-toc';
-    var $tocSelector = $(tocSelector);
-    var activeCurrentSelector = '.active-current';
+<!-- Google Analytics -->
+<script type="text/javascript">
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-    $tocSelector
-      .on('activate.bs.scrollspy', function () {
-        var $currentActiveElement = $(tocSelector + ' .active').last();
+ga('create', 'UA-66782235-1', 'auto');
+ga('send', 'pageview');
 
-        removeCurrentActiveClass();
-        $currentActiveElement.addClass('active-current');
+</script>
+<!-- End Google Analytics -->
 
-        $tocSelector[0].scrollTop = $currentActiveElement.position().top;
-      })
-      .on('clear.bs.scrollspy', function () {
-        removeCurrentActiveClass();
-      });
 
-    function removeCurrentActiveClass () {
-      $(tocSelector + ' ' + activeCurrentSelector)
-        .removeClass(activeCurrentSelector.substring(1));
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
     }
+});
 
-    function processTOC () {
-      getTOCMaxHeight();
-      toggleTOCOverflowIndicators();
-    }
-
-    function getTOCMaxHeight () {
-      var height = $('.sidebar').height() -
-                   $tocSelector.position().top -
-                   $('.post-toc-indicator-bottom').height();
-
-      $tocSelector.css('height', height);
-
-      return height;
-    }
-
-    function toggleTOCOverflowIndicators () {
-      tocOverflowIndicator(
-        '.post-toc-indicator-top',
-        $tocSelector.scrollTop() > 0 ? 'show' : 'hide'
-      );
-
-      tocOverflowIndicator(
-        '.post-toc-indicator-bottom',
-        $tocSelector.scrollTop() >= $tocSelector.find('ol').height() - $tocSelector.height() ? 'hide' : 'show'
-      )
-    }
-
-    $(document).on('sidebar.motion.complete', function () {
-      processTOC();
-    });
-
-    $('body').scrollspy({ target: tocSelector });
-    $(window).on('resize', function () {
-      if ( $('.sidebar').hasClass('sidebar-active') ) {
-        processTOC();
-      }
-    });
-
-    onScroll($tocSelector);
-
-    function onScroll (element) {
-      element.on('mousewheel DOMMouseScroll', function (event) {
-          var oe = event.originalEvent;
-          var delta = oe.wheelDelta || -oe.detail;
-
-          this.scrollTop += ( delta < 0 ? 1 : -1 ) * 30;
-          event.preventDefault();
-
-          toggleTOCOverflowIndicators();
-      });
-    }
-
-    function tocOverflowIndicator (indicator, action) {
-      var $indicator = $(indicator);
-      var opacity = action === 'show' ? 1 : 0;
-      $indicator.velocity ?
-        $indicator.velocity('stop').velocity({
-          opacity: opacity
-        }, { duration: 100 }) :
-        $indicator.stop().animate({
-          opacity: opacity
-        }, 100);
-    }
-
-  });
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
 </script>
 
-<script type="text/javascript" id="sidebar.nav">
-  $(document).ready(function () {
-    var html = $('html');
-    var TAB_ANIMATE_DURATION = 200;
-    var hasVelocity = $.isFunction(html.velocity);
-
-    $('.sidebar-nav li').on('click', function () {
-      var item = $(this);
-      var activeTabClassName = 'sidebar-nav-active';
-      var activePanelClassName = 'sidebar-panel-active';
-      if (item.hasClass(activeTabClassName)) {
-        return;
-      }
-
-      var currentTarget = $('.' + activePanelClassName);
-      var target = $('.' + item.data('target'));
-
-      hasVelocity ?
-        currentTarget.velocity('transition.slideUpOut', TAB_ANIMATE_DURATION, function () {
-          target
-            .velocity('stop')
-            .velocity('transition.slideDownIn', TAB_ANIMATE_DURATION)
-            .addClass(activePanelClassName);
-        }) :
-        currentTarget.animate({ opacity: 0 }, TAB_ANIMATE_DURATION, function () {
-          currentTarget.hide();
-          target
-            .stop()
-            .css({'opacity': 0, 'display': 'block'})
-            .animate({ opacity: 1 }, TAB_ANIMATE_DURATION, function () {
-              currentTarget.removeClass(activePanelClassName);
-              target.addClass(activePanelClassName);
-            });
-        });
-
-      item.siblings().removeClass(activeTabClassName);
-      item.addClass(activeTabClassName);
-    });
-
-    $('.post-toc a').on('click', function (e) {
-      e.preventDefault();
-      var targetSelector = escapeSelector(this.getAttribute('href'));
-      var offset = $(targetSelector).offset().top;
-      hasVelocity ?
-        html.velocity('stop').velocity('scroll', {
-          offset: offset  + 'px',
-          mobileHA: false
-        }) :
-        $('html, body').stop().animate({
-          scrollTop: offset
-        }, 500);
-    });
-
-    // Expand sidebar on post detail page by default, when post has a toc.
-    motionMiddleWares.sidebar = function () {
-      var $tocContent = $('.post-toc-content');
-      if (CONFIG.sidebar === 'post') {
-        if ($tocContent.length > 0 && $tocContent.html().trim().length > 0) {
-          displaySidebar();
-        }
-      }
-    };
-  });
+<script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
 </script>
 
 
-
-  <script type="text/javascript" src="/js/bootstrap.js"></script>
-
-  
-  
-
-  
-  
-
+  </div>
 </body>
 </html>
