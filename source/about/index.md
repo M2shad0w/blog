@@ -17,3 +17,7 @@ m2shad0w is a programmer。对智能硬件，前端，大数据分析 十分感�
 
 
 在梁博的影响下，开始搞数据相关工作。
+
+### 推荐理财
+
+![](http://7xk4vd.com1.z0.glb.clouddn.com/money_30.pic.jpg)

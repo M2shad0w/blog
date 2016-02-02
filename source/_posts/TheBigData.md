@@ -17,4 +17,23 @@ categories:
 数据多了自然就是大数据了，尤其是现在的信息化社会，一个普通的人，每天接触的信息量都是一千年前的人一生的信息了。纷繁的数据，需要挖掘分析，提炼出适合企业的关键点，以此来指导企业的各种商业决策。
 有同事上周末去了七牛的BigData的大会，回来跟我们说，一个facebook的数据团队给的一个案例就是 “他们改版了一下facebook首页的布局，虽然很好看，仅仅一个很小的内部测试，发现这给他们减少了20%的广告营收，然后他们马上就将改版撤下了，然后国内的人人却是直接抄去，结果导致现在......”,当然这个有点段子了，但是确实也是不无道理的。
 ### 分享一个TED视频
-<iframe height=500 width=90% src="http://player.youku.com/embed/XODI5NTQxNDQw" frameborder=0 allowfullscreen></iframe>
+<!-- <link href="css/user.css" rel="stylesheet"> -->
+<style type="text/css">
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+	}
+	.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	}
+</style>
+<div class="video-container">
+	<iframe height=315 width=560 src="http://player.youku.com/embed/XODI5NTQxNDQw" frameborder=0 allowfullscreen></iframe>
+</div>

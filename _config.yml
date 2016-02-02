@@ -68,7 +68,7 @@ pagination_dir: page
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
 # theme: yilia #landscape
-theme: next
+theme: hexo-theme-next
 avatar: http://7xk4vd.com1.z0.glb.clouddn.com/gitOctocat.jpg
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

@@ -69,7 +69,7 @@ spark 1.5.2 使用（scala2.10.x）编译的。
 
 **经实践,scala版本设置需要2.10.5, 以免带来奇怪的问题**
 
-## Running the Examples and Shell
+### Running the Examples and Shell
 
 这样安装的spark自带一些例子， Scala, Java, Python and R 的例子在 examples/src/main目录，可以在安装的spark根目录使用命令 bin/run-example <class> [params] 跑一些例子，例如计算Pi
 
@@ -78,3 +78,25 @@ spark 1.5.2 使用（scala2.10.x）编译的。
 ```
 
 可以直接在控制台中敲入spark-shell，开始spark之旅了。
+
+### ppt分享
+
+<style type="text/css">
+	.video-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+	}
+	.video-container iframe {
+    position: absolute;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+	}
+</style>
+<div class="video-container">
+<iframe src="http://www.slideshare.net/JiahuaZhu3/slideshelf" width="490px" height="470px" frameborder="0" marginwidth="0" marginheight="0" scrolling="no" style="border:none;" allowfullscreen webkitallowfullscreen mozallowfullscreen></iframe>
+</div>

@@ -6,12 +6,13 @@ categories:
 ---
 
 
-###  **0x00 DataFrame**
+###  **DataFrame**
 
 > Spark SQL是Spark的一个组件，用于结构化数据的计算。Spark SQL提供了一个称为DataFrames的编程抽象，DataFrames可以充当分布式SQL查询引擎。
+
 <!--more-->
 
-###  **0x01 如何连mysql**
+###  **如何连mysql**
 查看官方文档看到:   
 > Spark SQL also includes a data source that can read data from other databases using JDBC.To get started you will need to include the JDBC driver for you particular database on the spark classpath. 
 
@@ -27,7 +28,7 @@ SPARK_CLASSPATH=postgresql-9.3-1102-jdbc41.jar bin/spark-shell
 ```shell
 SPARK_CLASSPATH=/Users/m2shad0w/Downloads/mysql-connector-java-5.1.38/mysql-connector-java-5.1.38-bin.jar
 ```
-### **0x02 编程实例**
+### **编程实例**
 
 * 代码
 ```scala
@@ -52,7 +53,7 @@ object Spark2mysql {
 ```
 
 * 返回
-```shell
+```bash
 root
  |-- gender: string (nullable = true)
  |-- count: long (nullable = false)
@@ -65,7 +66,7 @@ root
  |-- age: integer (nullable = true)
 ```
 
-### **0x03 写到数据库**
+### **写到数据库**
 
 查看官方网站, DataFrame 提供了 write.jdbc和write.insertInto的接口
 
@@ -89,7 +90,7 @@ Name of the table in the external database.
 connectionProperties
 JDBC database connection arguments, a list of arbitrary string tag/value. Normally at least a "user" and "password" property should be included.
 ```
-### **04 总结**
+### **总结**
 
 但是感觉接口还是古板了一点。
 在spark issue上看到未来 spark jdbc 会支持行插入

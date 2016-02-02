@@ -6,16 +6,17 @@ categories: bigdata
 ---
 
 
-### **0x00 起因**
+### **起因**
 用spark分析数据时, 希望源数据能够写到HDFS上, 在前端数据采集的选择有kalfa 和flume, 了解了各自的特性, 打算使用flume 将数据聚合起来。
+
 <!--more-->
 
-### **0x01 Flume 简介**
+### **Flume 简介**
 > Apache Flume is a distributed, reliable, and available system for efficiently collecting, aggregating and moving large amounts of log data from many different sources to a centralized data store.
 
 Apache Flume 是一种可靠的分布式可用系统，用于从许多不同源将大量日志数据收集、聚合和移动至集中的数据存储。
 
-### **0x02 实践**
+### **实践**
 [聚合http-source](https://flume.apache.org/FlumeUserGuide.html#http-source), HTTP 请求通过一个 “handler” 将被转换成 flume 事件, 一个 Http 请求中的所有事件将被一次提交到 flume 的管道内. 如果 “handler” 抛出了一个异常, flume source 将会返回一个 HTTP 400 的状态码, 如果 flume source  不能添加事件到管道，将会返回一个 HTTP 503 的 状态码(暂时不可达)。
 
 * 在flume的安装目录的配置文件夹下
@@ -31,7 +32,7 @@ Apache Flume 是一种可靠的分布式可用系统，用于从许多不同源�
 	```
 * 配置文件内容
 	
-	```shell
+	```bash
 	# Define source, channel, sink
 	agent1.sources = r1
 	agent1.channels = ch1
@@ -107,5 +108,5 @@ Apache Flume 是一种可靠的分布式可用系统，用于从许多不同源�
 	```shell
 	hadoop fs -ls -R /user/hadoop/	flumetest/
 	```
-### **0X03 总结**
+### **总结**
 一开始在配置 **hdfs.fileType = SequenceFile** hadoop fs -cat 文件的时候, 显示乱码。应该配置成 **DataStream**
