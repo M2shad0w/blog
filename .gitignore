@@ -6,3 +6,10 @@ node_modules/
 public/
 .deploy*/
 package.json
+tag/*
+img/*
+archives/*
+categories/*
+css/*
+scaffolds/*
+2015/*
