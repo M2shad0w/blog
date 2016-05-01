@@ -1,7 +1,16 @@
 .DS_Store
-Thumbs.db
+# Thumbs.db
 db.json
 *.log
 node_modules/
 public/
 .deploy*/
+package.json
+tag/*
+img/*
+archives/*
+categories/*
+css/*
+scaffolds/*
+2015/*
+2016/*

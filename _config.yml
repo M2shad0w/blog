@@ -1,7 +1,7 @@
 # Hexo Configuration
 ## Docs: http://hexo.io/docs/configuration.html
 ## Source: https://github.com/hexojs/hexo/
-
+## add
 # Site
 title: Hexo
 subtitle:
@@ -67,5 +67,9 @@ theme: landscape
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy:
-  type:
+
+deploy: 
+  type: git
+  repo: git@github.com:M2shad0w/m2shad0w.github.io.git
+  branch: master
+  message: 
