@@ -1,5 +1,5 @@
 .DS_Store
-Thumbs.db
+# Thumbs.db
 db.json
 *.log
 node_modules/
@@ -13,3 +13,4 @@ categories/*
 css/*
 scaffolds/*
 2015/*
+2016/*
