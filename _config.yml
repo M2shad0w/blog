@@ -3,16 +3,16 @@
 ## Source: https://github.com/hexojs/hexo/
 
 # Site
-title: m2shad0w
-subtitle: follow the wind
-description: make life
-author: Apollo Zhu
-language: zh-hk
+title: Hexo
+subtitle:
+description:
+author: John Doe
+language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://m2shad0w.com
+url: http://yoursite.com
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
@@ -48,10 +48,6 @@ default_category: uncategorized
 category_map:
 tag_map:
 
-# Disqus
-disqus_shortname: m2shad0w
-
-
 # Date / Time format
 ## Hexo uses Moment.js to parse and display date
 ## You can customize the date format as defined in
@@ -67,13 +63,9 @@ pagination_dir: page
 # Extensions
 ## Plugins: http://hexo.io/plugins/
 ## Themes: http://hexo.io/themes/
-# theme: yilia #landscape
-theme: hexo-theme-next
-avatar: http://7xk4vd.com1.z0.glb.clouddn.com/gitOctocat.jpg
+theme: landscape
+
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html
-deploy: 
-  type: git
-  repo: git@github.com:M2shad0w/m2shad0w.github.io.git
-  branch: master
-  message: 
+deploy:
+  type:
