@@ -16,11 +16,11 @@ categories: network
 在`/etc/sysconfig/network-scripts` 修改 `ifcfg-enp3s0`文件
 
 ifcfg后缀名就是网卡的名
-可以通过｀ip add｀获取
+可以通过`ip add`获取
 
 ### 图形化配置
 
-｀nmtui edit 网卡名｀
+`nmtui edit 网卡名`
 
 依次填写好
 
