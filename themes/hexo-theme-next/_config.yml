@@ -262,3 +262,7 @@ images: images
 since: 2010
 # Theme version
 version: 0.5.0
+
+reward_comment: 坚持原创技术分享，您的支持将鼓励我继续创作！
+wechatpay: /images/wechat.jpg
+alipay: 
