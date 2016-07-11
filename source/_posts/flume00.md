@@ -85,20 +85,15 @@ Apache Flume 是一种可靠的分布式可用系统，用于从许多不同源�
     i = 0
     j = 0
     # flume  server url
-    url = 'http://flumeMac:5143'
-    payload = {"body": "data money"}
+    url = 'http://prispark2.baidu.cn:5143'
+
+    payload = [{"body": "spark stream test","headers": {"host": "hello"}}]
     while True:
         i += 1
-        listdata = []
-        listdata.append(payload)
-        # print listdata, i
-        r = requests.post(url, data=json.dumps(listdata))
+        r = requests.post(url, data=json.dumps(payload))
         # print r.status_code
         if r.status_code != 200:
             j += 1
-        if i > 500000:
-            print "time pasue"
-            time.sleep(10)
         if i > 100000:
             break
     print "send times is ", i, "fail times is ", j
