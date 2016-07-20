@@ -54,7 +54,7 @@ local
 osc: http://maven.oschina.net/content/groups/public/
 typesafe: http://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
 sonatype-oss-releases
-maven-centra
+maven-central
 ```
 
 [参考官网说明](http://www.scala-sbt.org/0.13.2/docs/Detailed-Topics/Library-Management.html#override-all-resolvers-for-all-builds)
