@@ -9,7 +9,7 @@ echo "wait for ..."
 hexo clean
 hexo d -g
 ret=$?
-if [$ret -eq 0 ]
+if [ $ret -eq 0 ]
 then    
     echo "hexo successfully"
 else
@@ -19,7 +19,7 @@ git add ./source/_posts
 git commit -am "blog backup $DATE"
 git push blog master
 ret=$? 
-if [$ret -eq 0 ]
+if [ $ret -eq 0 ]
 then
     echo "blog backup successfully"
 else
