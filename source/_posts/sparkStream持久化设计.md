@@ -101,6 +101,28 @@ if __name__ == "__main__":
 
 ```
 
+### 优化
+
+```python
+class ConnectionPool(object):
+    def __init__(self):
+        pass
+
+    @staticmethod
+    def get_connection():
+        track_host = ""
+        track_user = ""
+        track_password = ""
+        track_db = ""
+        import MySQLdb
+        from DBUtils.PooledDB import PooledDB
+        pool = PooledDB(MySQLdb, 2, host=track_host, user=track_user, passwd=track_password, db=track_db, port=3306)
+        return pool.connection()
+
+    @staticmethod
+    def return_connection(connection):
+        return connection.close()
+```
 ### 参考
 
 [https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/spark-streaming/basic-concepts/output-operations-on-DStreams.html](https://aiyanbo.gitbooks.io/spark-programming-guide-zh-cn/content/spark-streaming/basic-concepts/output-operations-on-DStreams.html)

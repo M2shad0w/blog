@@ -173,9 +173,9 @@ mathjax:
 
 
 # Swiftype Search API Key
-#swiftype_key:
+# swiftype_key:
 
-swiftype_key: xk_vb9-Bh_iF48cAUGSK
+# swiftype_key: xk_vb9-Bh_iF48cAUGSK
 # Baidu Analytics ID
 baidu_analytics: 812376c2631b7f221bbe8132a189eab1
 
