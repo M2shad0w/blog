@@ -7,7 +7,7 @@ echo $local
 git pull git@github.com:M2shad0w/blog.git
 echo "wait for ..."
 hexo clean
-hexo d -g
+hexo g -d
 ret=$?
 if [ $ret -eq 0 ]
 then    
