@@ -17,7 +17,7 @@ else
 fi
 git add ./source/_posts
 git commit -am "blog backup $DATE"
-git push origin master
+git push blog master
 ret=$? 
 if [$ret -eq 0 ]
 then
