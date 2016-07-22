@@ -1,4 +1,5 @@
 #!/bin/bash
+
 DATE=`date`
 echo "build at $DATE"
 local=$pwd
@@ -16,7 +17,7 @@ else
     echo "hexo failed"
 fi
 git add ./source/_posts
-git commit -am "blog backup $DATE"
+git commit -m "blog backup $DATE"
 git push blog master
 ret=$? 
 if [ $ret -eq 0 ]
