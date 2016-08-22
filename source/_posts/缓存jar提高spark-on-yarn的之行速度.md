@@ -1,5 +1,5 @@
 layout: post
-title: 缓存jar提高spark-on-yarn的之行速度
+title: 缓存jar提高spark-on-yarn的执行速度
 date: 2016-07-09 15:44:23
 tags: bigdata
 categories:
