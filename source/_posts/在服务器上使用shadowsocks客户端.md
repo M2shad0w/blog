@@ -3,7 +3,7 @@ title: 在服务器上使用shadowsocks客户端
 date: 2016-06-06 10:14:53
 tags: shadowsocks
 categories:
-  - hue
+  - shadowssocks
 ---
 
 ### ss客户端在centos上
