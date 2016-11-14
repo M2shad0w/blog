@@ -46,7 +46,11 @@ src/
 
 sbt 默认下载库文件很慢, 还时不时被打断
 
-我们可以在用户目录下创建  `touch ~/.sbt/repositories`, 填上开源中国的镜像
+开源中国的 maven 仓库已经不可用
+
+这里可以使用 ali 的仓库
+
+我们可以在用户目录下创建  `touch ~/.sbt/repositories`, ~~填上开源中国的镜像~~
 
 ```bash
 [repositories]
@@ -55,6 +59,30 @@ osc: http://maven.oschina.net/content/groups/public/
 typesafe: http://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
 sonatype-oss-releases
 maven-central
+```
+
+填上 ali 的仓库地址 
+
+```bash
+[repositories]
+local
+osc: http://maven.aliyun.com/nexus/content/groups/public/
+typesafe: http://repo.typesafe.com/typesafe/ivy-releases/, [organization]/[module]/(scala_[scalaVersion]/)(sbt_[sbtVersion]/)[revision]/[type]s/[artifact](-[classifier]).[ext], bootOnly
+sonatype-oss-releases
+maven-central
+sonatype-oss-snapshots
+```
+
+
+vi ~/.m2/settings.xml
+
+```bash
+    <mirror>
+      <id>alimaven</id>
+      <name>aliyun maven</name>
+      <url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+      <mirrorOf>central</mirrorOf>
+    </mirror>
 ```
 
 [参考官网说明](http://www.scala-sbt.org/0.13.2/docs/Detailed-Topics/Library-Management.html#override-all-resolvers-for-all-builds)
