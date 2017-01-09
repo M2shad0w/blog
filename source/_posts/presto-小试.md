@@ -51,8 +51,7 @@ discovery.uri=http://hostname:28080
 ```
 workers
 ```
-coordinator=true
-node-scheduler.include-coordinator=true
+coordinator=false
 http-server.http.port=28080
 query.max-memory=6GB
 query.max-memory-per-node=2GB
