@@ -38,7 +38,7 @@ $ pip install shadowsocks
 ```
 $ nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 &
 // 然后加入开机自启动
-$ echo " nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 &" /etc/rc.local
+$ echo " nohup sslocal -c /etc/shadowsocks.json /dev/null 2>&1 &" > /etc/rc.local
 ```
 ```
 $ ps aux |grep sslocal |grep -v "grep"
