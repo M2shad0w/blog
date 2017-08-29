@@ -94,3 +94,14 @@ $TTL 1D
 ```
 systemctl start named-chroot
 ```
+
+查看 dns
+
+```
+➜  ~ nslookup master.hunliji.cn
+Server:		172.16.10.16
+Address:	172.16.10.16#53
+
+Name:	master.hunliji.cn
+Address: 172.16.10.16
+```
