@@ -16,11 +16,6 @@ date: 2015-07-03 13:21:42
 招聘数据工程师
 简历速递: ![](http://ww3.sinaimg.cn/large/63fe561egw1f72mzbgud1g205w00mgle.gif)
 
-### 数据分析书籍
-
-![](http://ww4.sinaimg.cn/mw690/63fe561egw1f7odhi5d6zj20qo0zk41m.jpg)
-![](http://ww1.sinaimg.cn/mw690/63fe561egw1f7odhier2tj20qo0zkn19.jpg)
-![](http://ww2.sinaimg.cn/mw690/63fe561egw1f7odhidyw4j20qo0zkwi2.jpg)
 
 
 
