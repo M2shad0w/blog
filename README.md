@@ -9,7 +9,7 @@
 
 一下文章索引为发布时间倒序:
 
-* python 环境迁移
-* hadoop 集群命令
+* [sublime 开发环境](https://github.com/M2shad0w/blog/issues/2)
+* [hadoop 集群命令](https://github.com/M2shad0w/blog/issues/1)
 
 
