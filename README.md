@@ -9,6 +9,7 @@
 
 一下文章索引为发布时间倒序:
 
+* [python 私有源搭建](https://github.com/M2shad0w/blog/issues/3)
 * [sublime 开发环境](https://github.com/M2shad0w/blog/issues/2)
 * [hadoop 集群命令](https://github.com/M2shad0w/blog/issues/1)
 
