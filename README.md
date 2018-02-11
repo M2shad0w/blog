@@ -7,7 +7,7 @@
 > 3. 文章通过 Label 进行分类，可利用此功能进行快速查找。
 > 4. 谢谢光临！
 
-一下文章索引为发布时间倒序:
+文章索引为发布时间倒序:
 
 * [python 私有源搭建](https://github.com/M2shad0w/blog/issues/3)
 * [sublime 开发环境](https://github.com/M2shad0w/blog/issues/2)
