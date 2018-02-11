@@ -9,8 +9,9 @@
 
 文章索引为发布时间倒序:
 
-* [机器学习、深度学习资料整理 ](https://github.com/M2shad0w/blog/issues/5)
-* []()
+* [机器学习、深度学习资料整理 ](https://github.com/M2shad0w/blog/issues/6)
+* [elastic-search-sync-data](https://github.com/M2shad0w/blog/issues/5)
+* [异地机房数据同步实践](https://github.com/M2shad0w/blog/issues/４)
 * [python 私有源搭建](https://github.com/M2shad0w/blog/issues/3)
 * [sublime 开发环境](https://github.com/M2shad0w/blog/issues/2)
 * [hadoop 集群命令](https://github.com/M2shad0w/blog/issues/1)
