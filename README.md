@@ -9,6 +9,7 @@
 
 文章索引为发布时间倒序:
 
+* [一次 dns 解析问题的回溯](https://github.com/M2shad0w/blog/issues/8)
 * [机器学习、深度学习资料整理 ](https://github.com/M2shad0w/blog/issues/6)
 * [elastic-search-sync-data](https://github.com/M2shad0w/blog/issues/5)
 * [异地机房数据同步实践](https://github.com/M2shad0w/blog/issues/４)
