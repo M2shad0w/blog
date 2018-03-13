@@ -14,7 +14,7 @@
 * [一次 NTP 放大 Ddos 的攻击样本研究](https://github.com/M2shad0w/blog/issues/10)
 * [大数据高效压缩算法选型](https://github.com/M2shad0w/blog/issues/9)
 * [一次 dns 解析问题的回溯](https://github.com/M2shad0w/blog/issues/8)
-* [机器学习、深度学习资料整理 ](https://github.com/M2shad0w/blog/issues/6)
+* [资料整理 ](https://github.com/M2shad0w/blog/issues/6)
 * [elastic-search-sync-data](https://github.com/M2shad0w/blog/issues/5)
 * [异地机房数据同步实践](https://github.com/M2shad0w/blog/issues/４)
 * [python 私有源搭建](https://github.com/M2shad0w/blog/issues/3)
