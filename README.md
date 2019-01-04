@@ -8,6 +8,7 @@
 > 4. 谢谢光临！
 
 文章索引为发布时间倒序:
+* [redis 一次问题排查]()
 * [ubuntu 18.04 体验](https://github.com/M2shad0w/blog/issues/19)
 * [web API 性能优化](https://github.com/M2shad0w/blog/issues/12)
 * [presto 实践优化](https://github.com/M2shad0w/blog/issues/11)
